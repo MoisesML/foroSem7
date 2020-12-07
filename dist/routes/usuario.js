@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.usuario_router = void 0;
+var express_1 = require("express");
+var usuario_1 = require("../controllers/usuario");
+exports.usuario_router = express_1.Router();
+exports.usuario_router.post('/registro', usuario_1.crearUsuario);
+exports.usuario_router.post('/login', usuario_1.loginUsuario);
+exports.usuario_router.get('/usuarios', usuario_1.traerUsuarios);
+exports.usuario_router.post('/visitas/:id', usuario_1.agregarVisita);
+exports.usuario_router.post('/fonos/:id', usuario_1.agregarfono);
